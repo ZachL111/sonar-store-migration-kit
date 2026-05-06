@@ -1,0 +1,17 @@
+{
+  "repo": "sonar-store-migration-kit",
+  "thresholds": {
+    "signal": 3,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 5,
+    "ship": 170,
+    "watch": 97
+  },
+  "terms": [
+    "index fit",
+    "join width",
+    "constraint risk",
+    "plan drift"
+  ]
+}

@@ -65,3 +65,9 @@ swiftc -sdk $swiftSdk.FullName src/Core.swift src/DomainReview.swift tests/Test.
 ./build/test.exe
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-sonar-store-migration-detail.ps1
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-sonar-store-migration-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-sonar-store-migration-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
