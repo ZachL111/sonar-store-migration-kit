@@ -1,0 +1,73 @@
+{
+  "repo": "sonar-store-migration-kit",
+  "language": "Swift",
+  "category": "Databases",
+  "goal": "Develop a Swift command-oriented project for migration scenarios with framed sample traffic, bounds and ordering tests, and synthetic fixtures only.",
+  "review_model": {
+    "terms": [
+      "index fit",
+      "join width",
+      "constraint risk",
+      "plan drift"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "index fit",
+      "signal": 57,
+      "slack": 33,
+      "drag": 16,
+      "confidence": 93,
+      "score": 192,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "join width",
+      "signal": 45,
+      "slack": 49,
+      "drag": 30,
+      "confidence": 57,
+      "score": 106,
+      "lane": "watch"
+    },
+    {
+      "name": "edge",
+      "focus": "constraint risk",
+      "signal": 46,
+      "slack": 41,
+      "drag": 11,
+      "confidence": 48,
+      "score": 148,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "plan drift",
+      "signal": 59,
+      "slack": 27,
+      "drag": 15,
+      "confidence": 58,
+      "score": 158,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "index fit",
+      "signal": 84,
+      "slack": 37,
+      "drag": 26,
+      "confidence": 60,
+      "score": 187,
+      "lane": "ship"
+    }
+  ]
+}
